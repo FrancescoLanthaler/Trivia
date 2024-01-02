@@ -1,7 +1,5 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -12,53 +10,44 @@
   transition: filter 300ms;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.question {
+  place-content: center center;
+  border-radius: 100px;
+  padding: 40px;
+  width: fit-content;
+  margin: 10px;
+  filter: contrast(170%) brightness(100%);
+  background-color: white;
+  background:
+    linear-gradient(to bottom right, rgba(130, 255, 161, 0.5), rgba(238, 255, 55, 0.616)),
+    url('./assets/noise.svg');
+  filter: drop-shadow(0 3mm 4mm rgb(82, 149, 99));
+}
+
+.answers {
+  padding-top: 40px;
 }
 
 .answer {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
-  color: black;
-  background-color: antiquewhite;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
 }
 
 .correct {
-  background-color: rgb(88, 192, 88);
-
+  background: rgb(194, 255, 134);
 }
 
 .wrong {
-  background-color: rgb(255, 82, 82);
+  background: rgb(255, 193, 179);
 }

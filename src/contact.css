@@ -1,0 +1,33 @@
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 1px solid #2135477f;
+}
+
+textarea {
+    height: 200px;
+    max-width: 400px;
+    resize: vertical;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.error {
+    color: red;
+}

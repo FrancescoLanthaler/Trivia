@@ -1,15 +1,15 @@
 import { useState, useEffect, useCallback } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import he from 'he';
-import PacmanLoader from "react-spinners/PacmanLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 
 
 function Question(props) {
   const { text } = props;
   return (
-    <h2>{he.decode(text)}</h2>
+    <div className='question'>
+      <h2>{he.decode(text)}</h2>
+    </div>
   )
 }
 
@@ -52,7 +52,7 @@ function Answers({ answers, checkAnswer }) {
   }, [answers]);
 
   return (
-    <div>
+    <div className='answers'>
       {answers.map((answer) => (
         <Option key={answer.text} answered={answered} text={he.decode(answer.text)} correct={answer.correct} onAnswerClick={() => { checkAnswer(answer); setAnswered(true); }} />
       ))}
@@ -71,7 +71,7 @@ function QuestionBlock(props) {
 
   const fetchData = useCallback(() => {
     setLoading(true);
-    return fetch('https://opentdb.com/api.php?amount=10&type=multiple')
+    return fetch('https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -124,7 +124,7 @@ function QuestionBlock(props) {
   if (start) {
     return (
       <>
-        {loading && <PacmanLoader color="#36d7b7" />}
+        {loading && <PulseLoader color="#6a6a6a" />}
 
         {answeredQuestions < dataArr.length && (
           <>
@@ -161,8 +161,8 @@ function StartScreen(props) {
 
   return (
     <div>
-      <h1>Quiz</h1>
-      <Button text="Start" onClick={onStartClick} className="start" />
+      <h1>Test your knowledge</h1>
+      <Button text="Start the quiz" onClick={onStartClick} className="start" />
     </div>
   )
 }

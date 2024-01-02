@@ -1,0 +1,57 @@
+.body {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li a {
+    font-size: 1em;
+    color: #213547;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header {
+    background:
+        linear-gradient(to top right, rgba(88, 255, 130, 0.5), rgba(238, 255, 55, 0.616)),
+        url('./assets/noise.svg');
+    padding: 15px;
+    box-shadow: 0 1mm 1rem rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+li {
+    margin-right: 40px;
+}
+
+
+a:hover {
+    color: #ecf0f1;
+}
+
+
+footer {
+    background:
+        linear-gradient(to top left, rgba(88, 255, 130, 0.5), rgba(238, 255, 55, 0.616)),
+        url('./assets/noise.svg');
+    color: #213547;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
