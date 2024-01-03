@@ -1,8 +1,8 @@
-# React + Vite
+# Trivia App Readme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey there! This is Francesco Lanthaler's Trivia App. It runs on React and grabs questions from the Open Trivia Database. It's my final project for the Frontend Development Course at FH Salzburg.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+How to set it up:
+1. Copy this repo to your computer.
+2. Open the folder and type "npm install" to get everything ready.
+3. Run "npm run dev" and click the link in your terminal.
