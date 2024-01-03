@@ -6,3 +6,5 @@ How to set it up:
 1. Copy this repo to your computer.
 2. Open the folder and type "npm install" to get everything ready.
 3. Run "npm run dev" and click the link in your terminal.
+
+Enjoy!
