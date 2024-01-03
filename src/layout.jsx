@@ -7,16 +7,9 @@ export function Navbar() {
         <header>
             <nav>
                 <ul>
-                    <li><NavLink to={`/`} className={({ isActive }) =>
-                        isActive
-                            ? "active" : ""
-                    }>Play</NavLink></li>
-                    <li><NavLink to={`about`} className={({ isActive }) =>
-                        isActive
-                            ? "active" : ""} >About</NavLink></li>
-                    <li><NavLink to={`contact`} className={({ isActive }) =>
-                        isActive
-                            ? "active" : ""}>Contact Me</NavLink></li>
+                    <NavThing page='/' title='Home' />
+                    <NavThing page='about' title='About' />
+                    <NavThing page='contact' title='Contact Me' />
                 </ul>
             </nav>
         </header>
@@ -28,5 +21,17 @@ export function Footer() {
         <footer>
             <p>&copy; 2023 Trivia Website | Designed by Francesco Lanthaler</p>
         </footer>
+    );
+}
+
+function NavThing(props) {
+    const { page, title } = props;
+
+    return (
+        <li><NavLink to={page} className={({ isActive }) =>
+            isActive
+                ? "active" : ""
+        }>{title}</NavLink>
+        </li>
     );
 }

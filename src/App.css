@@ -21,9 +21,6 @@
   box-shadow: 0 5mm 1rem rgba(0, 0, 0, 0.275);
 }
 
-.card {
-  padding: 2em;
-}
 
 .question {
   place-content: center center;
@@ -42,9 +39,11 @@
 }
 
 .correct {
-  background: rgb(194, 255, 134);
+  transition: 0.5s;
+  background: rgb(194, 255, 134) !important;
 }
 
 .wrong {
-  background: rgb(255, 193, 179);
+  transition: 0.5s;
+  background: rgb(255, 193, 179) !important;
 }

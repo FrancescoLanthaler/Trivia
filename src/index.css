@@ -52,8 +52,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-
-  filter: drop-shadow(1mm 1mm 0.7rem rgba(125, 122, 73, 0.704));
+  box-shadow: 1mm 1mm 0.7rem rgba(125, 122, 73, 0.704);
   margin: 20px;
 
   background-color: #fff279ae;
@@ -62,14 +61,11 @@ button {
 }
 
 button:hover {
+  border-color: #646cff;
   transition: 0.5s;
   background-color: #fff279ae;
-  filter: drop-shadow(3mm 3mm 1.5rem rgba(88, 87, 51, 0.885));
+  box-shadow: 3mm 3mm 1rem rgba(88, 87, 51, 0.662);
 
-}
-
-button:hover {
-  border-color: #646cff;
 }
 
 button:focus,

@@ -44,7 +44,8 @@ function Option(props) {
 }
 
 
-function Answers({ answers, checkAnswer }) {
+function Answers(props) {
+  const { answers, checkAnswer } = props;
   const [answered, setAnswered] = useState(false);
 
   useEffect(() => {

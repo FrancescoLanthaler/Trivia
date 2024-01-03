@@ -31,7 +31,6 @@ nav {
     padding: 10px 50px;
     border-radius: 100px;
     filter: drop-shadow(1mm 1mm 0.7rem rgba(125, 122, 73, 0.704));
-
 }
 
 ul {
@@ -66,4 +65,8 @@ footer {
 
 .active {
     font-weight: bold;
+}
+
+h1 {
+    padding-bottom: 30px;
 }
