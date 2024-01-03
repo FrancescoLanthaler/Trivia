@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { object, string } from "yup";
 import * as Yup from 'yup';
-import './contact.css';
+import './css/contact.css';
 
 const Contact = () => {
     return (

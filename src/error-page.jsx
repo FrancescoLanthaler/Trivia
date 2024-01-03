@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useRouteError } from "react-router-dom";
 import { Navbar, Footer } from './layout.jsx';
-import './layout.css';
+import './css/layout.css';
 
 export default function Error() {
     const error = useRouteError();

@@ -5,7 +5,7 @@ import Root from './root.jsx'
 import About from './about.jsx'
 import Contact from './contact.jsx'
 import Error from "./error-page";
-import './index.css'
+import './css/index.css'
 import {
   createBrowserRouter,
   Route,
