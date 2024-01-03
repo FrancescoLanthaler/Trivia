@@ -6,7 +6,7 @@ import './contact.css';
 
 const Contact = () => {
     return (
-        <div>
+        <div className='App'>
             <h1>Contact Me</h1>
             <Form />
         </div>
@@ -28,8 +28,8 @@ const Form = () => {
             email: Yup.string().email('Invalid email address').required('Required'),
         }),
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
             formik.setFieldValue('message', '');
+            alert("Sike! You thought you could contact me? I don't even have a backend server to handle your message. You can't contact me. I'm sorry. :( But if you really want to contact me, you can email me at lanfra.dev@lanthaler.com")
         },
     });
     return (

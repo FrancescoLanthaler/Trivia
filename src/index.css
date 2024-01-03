@@ -34,6 +34,9 @@ body {
   place-items: start center;
   min-width: 320px;
   min-height: 100vh;
+  background:
+    linear-gradient(to top right, rgba(88, 255, 130, 0.5), rgba(238, 255, 55, 0.74)),
+    url('./assets/noise.svg');
 }
 
 h1 {
@@ -50,22 +53,19 @@ button {
   font-weight: 500;
   font-family: inherit;
 
-  filter: drop-shadow(1mm 1mm 0.5rem rgba(0, 0, 0, 0.509));
+  filter: drop-shadow(1mm 1mm 0.7rem rgba(125, 122, 73, 0.704));
   margin: 20px;
 
-  background:
-    linear-gradient(to top left, rgba(88, 255, 130, 0.5), rgba(238, 255, 55, 0.616)),
-    url('./assets/noise.svg');
-
+  background-color: #fff279ae;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  transition: 2s;
-  background:
-    linear-gradient(to bottom left, rgba(71, 250, 116, 0.697), rgba(209, 252, 39, 0.715)),
-    url('./assets/noise.svg');
+  transition: 0.5s;
+  background-color: #fff279ae;
+  filter: drop-shadow(3mm 3mm 1.5rem rgba(88, 87, 51, 0.885));
+
 }
 
 button:hover {
