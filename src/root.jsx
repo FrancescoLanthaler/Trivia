@@ -5,7 +5,7 @@ import './css/layout.css';
 
 function Root() {
     return (
-        <div>
+        <div className="root">
             <Navbar />
             <div className="body">
                 <Outlet />

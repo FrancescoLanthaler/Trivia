@@ -40,3 +40,10 @@ button:hover {
 .error {
     color: red;
 }
+
+@media screen and (max-width: 600px) {
+    .body {
+        display: block;
+    }
+
+}
