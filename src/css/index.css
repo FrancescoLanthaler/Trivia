@@ -36,7 +36,7 @@ body {
   min-height: 100vh;
   background:
     linear-gradient(to top right, rgba(88, 255, 130, 0.5), rgba(238, 255, 55, 0.74)),
-    url('./assets/noise.svg');
+    url('./noise.svg');
 }
 
 h1 {
