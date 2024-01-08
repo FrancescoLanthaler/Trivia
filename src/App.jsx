@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import './css/App.css'
 import he from 'he';
 import PulseLoader from "react-spinners/PulseLoader";
+import useFetchData from './useFetchData.jsx';
 
 
 function Question(props) {
@@ -20,29 +21,25 @@ function Button(props) {
   )
 }
 
-
 function Option(props) {
   const { answered, text, correct, onAnswerClick } = props;
-  const [cls, setCls] = useState("");
+  let classe = "";
 
-  useEffect(() => {
-    if (answered) {
-      if (correct) {
-        setCls("correct");
-      } else {
-        setCls("wrong")
-      }
+  if (answered) {
+    if (correct) {
+      classe = "correct";
+    } else {
+      classe = "wrong";
     }
-    else {
-      setCls("");
-    }
-  }, [answered, props]);
+  }
+  else {
+    classe = "";
+  }
 
   return (
-    <Button text={text} disabled={answered} onClick={() => { onAnswerClick(); }} className={`answer ${cls}`} />
+    <Button text={text} disabled={answered} onClick={() => { onAnswerClick(); }} className={`answer ${classe}`} />
   )
 }
-
 
 function Answers(props) {
   const { answers, checkAnswer } = props;
@@ -61,28 +58,12 @@ function Answers(props) {
   )
 }
 
-function QuestionBlock(props) {
-  const [data, setData] = useState(null);
+function QuestionBlock() {
   const [count, setCount] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState(0);
-  const [error, setError] = useState(null);
   const [answers, setAnswers] = useState([]);
-  const [start, setStart] = useState(false);
-  const [loading, setLoading] = useState(false);
 
-  const fetchData = useCallback(() => {
-    setLoading(true);
-    return fetch('https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        setLoading(false);
-        return response.json();
-      })
-      .then(json => setData(json))
-      .catch(error => { setError(error.message); setStart(false) });
-  }, []);
+  const { loading, data, error, start, fetchData, setStart } = useFetchData();
 
   useEffect(() => {
     if (start && answeredQuestions > 10) {
