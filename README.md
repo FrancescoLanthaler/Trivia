@@ -8,3 +8,6 @@ How to set it up:
 3. Run "npm run dev" and click the link in your terminal.
 
 Enjoy!
+
+Attention: the noise svg only works on the build version on trivia.francescolanthaler.com 
+It won't work locally.
