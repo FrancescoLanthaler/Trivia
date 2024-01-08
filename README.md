@@ -9,5 +9,5 @@ How to set it up:
 
 Enjoy!
 
-Attention: the noise svg only works on the build version on trivia.francescolanthaler.com 
+Attention: the noise.svg only works on the build version on [trivia.francescolanthaler.com ](url)
 It won't work locally.
