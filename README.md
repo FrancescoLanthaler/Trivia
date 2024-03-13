@@ -1,4 +1,4 @@
-# Trivia App Readme
+# Trivia App
 
 Hey there! This is Francesco Lanthaler's Trivia App. It runs on React and grabs questions from the Open Trivia Database. It's my final project for the Frontend Development Course at FH Salzburg.
 
